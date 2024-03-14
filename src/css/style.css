@@ -103,6 +103,42 @@
   transform: translateY(5px);
 }
 
+
+.range-calculator {
+  padding: 1.5625rem 0;
+}
+
+.range-calculator .title {
+  font-size: 2.375rem;
+  text-align: center;
+}
+
+.range-calculator .car {
+  position: relative;
+}
+
+.range-calculator .car-img {
+  width: 100%;
+}
+
+.range-calculator .wheel {
+  position: absolute;
+  width: 9.5%;
+}
+.range-calculator .wheel img{
+  width: 100%;
+}
+
+.range-calculator .wheel.-right {
+  bottom: 13%;
+  left: 24.8%;
+}
+
+.range-calculator .wheel.-left {
+  bottom: 13%;
+  left: 64%;
+}
+
 .footer {
   background: var(--black);
   color: var(--white);
@@ -182,3 +218,5 @@
   color: var(--primary-lighter);
   margin-left: 20px;
 }
+
+
