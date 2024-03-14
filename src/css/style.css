@@ -1,0 +1,184 @@
+@import "reset.css";
+@import "fonts.css";
+@import "global.css";
+
+.main-nav {
+  background: var(--semi-black);
+  height: 4.0625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav .logo {
+  display: block;
+}
+
+.hero {
+  background: url("../assets/img/hero-image@2x.jpg") center no-repeat;
+  background-size: cover;
+  height: 45.625rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.125rem;
+}
+
+.menu > ul {
+  display: flex;
+  max-width: 44.25rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.menu > ul a {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 0.875rem;
+  display: block;
+  position: relative;
+  padding: 0.875rem 0;
+}
+
+.menu > ul > .active > a:after,
+.menu > ul a:hover:after {
+  content: "";
+  position: absolute;
+  background: var(--white);
+  height: 1px;
+  display: block;
+  left: -10px;
+  right: -10px;
+  bottom: 0;
+}
+
+.motto {
+  max-width: 50.625rem;
+  padding: 5.9375rem 0 1.5625rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.motto h3 {
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+
+.motto > .description {
+  width: 548px;
+  margin: 1.875rem auto;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  text-align: center;
+}
+
+.motto > .button-scroll {
+  width: 4.625rem;
+  height: 4.625rem;
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.motto > .button-scroll img {
+  transition: transform 0.1s linear;
+  transform: translateY(0);
+}
+
+.motto > .button-scroll:hover img {
+  transform: translateY(5px);
+}
+
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 3.25rem 0;
+}
+
+.footer a {
+  color: var(--white);
+}
+
+.footer .row {
+  display: flex;
+}
+
+.footer .col {
+  max-width: 13.75rem;
+  width: 100%;
+}
+
+.footer .widget h4 {
+  font-weight: bold;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer .widget a{
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.footer .newsletter h4 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer .newsletter .desc {
+  width: 16.25rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--light-blue);
+  margin-bottom: 1.25rem;
+}
+
+.footer .newsletter form {
+  display: flex;
+  align-items: center;
+}
+.footer .newsletter input {
+  width: 210px;
+  box-sizing: border-box;
+  padding: 0.625rem 1.25rem;
+  border-radius: 4px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--light-blue);
+  font-family: Arial, sans-serif;
+  font-size: 0.875rem;
+  color: var(--white);
+}
+
+.footer .newsletter .submit-btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  background: var(--white);
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: var(--primary-lighter);
+  margin-left: 20px;
+}
