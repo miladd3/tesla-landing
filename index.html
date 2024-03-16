@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8"/>
   <link rel="icon" type="image/svg+xml" href="/src/assets/img/logo.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vite App</title>
+
+  <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
 <nav class="main-nav">
@@ -63,6 +65,98 @@
           <span class="km">KM</span>
         </div>
       </div>
+    </div>
+
+
+    <div class="range-form">
+      <div class="row">
+        <div class="col">
+          <div class="range-input">
+            <label class="label">Speed</label>
+
+            <div class="number-input">
+              <div class="content">
+                <div class="num">100</div>
+                <div class="unit">KMH</div>
+              </div>
+              <div class="actions">
+                <button class="plus"></button>
+                <div class="line"></div>
+                <button class="minus"></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="range-input">
+            <label class="label label-temp">Outside temperature </label>
+            <div class="inputs">
+              <div class="number-input">
+                <div class="content">
+                  <div class="num">20°</div>
+                </div>
+                <div class="actions">
+                  <button class="plus"></button>
+                  <div class="line"></div>
+                  <button class="minus"></button>
+                </div>
+              </div>
+
+              <button class="ac-button">
+                <span class="state">AC OFF</span>
+
+                <span class="icon">
+                  <img src="src/assets/img/icon-fan-gray.svg" alt="fan">
+                  <img src="src/assets/img/icon-fan-white.svg" alt="fan" hidden>
+                  <img src="src/assets/img/icon-wave-gray.svg" alt="wave" hidden>
+                  <img src="src/assets/img/icon-wave-white.svg" alt="wave" hidden>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="range-input wheel-input">
+            <label class="label">wheels</label>
+
+            <div class="radios">
+              <input type="radio" id="yes" name="wheel-size" value="yes">
+              <label for="yes" class="wheel-selector size-19">
+                <img src="src/assets/img/icon-wheel.svg" alt="wheel">
+
+                <span class="size">19”</span>
+              </label>
+
+              <input type="radio" id="no" name="wheel-size" value="no">
+              <label for="no" class="wheel-selector size-21">
+                <img src="src/assets/img/icon-wheel.svg" alt="wheel">
+
+                <span class="size">21”</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="desc">
+      The actual amount of range that you experience will vary based on your particular use conditions. Your vehicle
+      range is also dependent on other conditions, such as vehicle configuration, battery age and condition, driving
+      style and operating, environmental and climate conditions. See how some of these particular use conditions may
+      affect your range in our simulation model.
     </div>
   </div>
 </section>
