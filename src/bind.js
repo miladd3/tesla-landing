@@ -1,7 +1,7 @@
 import {useButtons, useRenders} from "./selectors.js";
 import {computed, watch} from "./reactivity.js";
 
-const bind = ({speed, temperature, wheelSize, ac}) => {
+const bind = ({speed, temperature, wheelSize, ac, range100d}) => {
     const buttons = useButtons();
     const renders = useRenders();
     const rangeCalculator = document.querySelector('.range-calculator');
@@ -69,6 +69,11 @@ const bind = ({speed, temperature, wheelSize, ac}) => {
     watch(acText, (val) => {
         if (buttons.ac)
             buttons.ac.querySelector('.state').innerHTML = val
+    })
+
+    watch(range100d, (val) => {
+        if (rangeCalculator)
+            rangeCalculator.querySelector('#range-100d').innerHTML = val
     })
 }
 
