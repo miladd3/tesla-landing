@@ -1,5 +1,6 @@
 import {computed, ref} from './reactivity.js'
 import data100d from '../data/metric-100D.json'
+import dataP100d from '../data/metric-P100D.json'
 
 const useRangeCalculator = () => {
     const speed = ref(100);
@@ -10,19 +11,24 @@ const useRangeCalculator = () => {
     const acString = computed(() => ac.value ? 'on' : 'off')
     const wheelSizeNum = computed(() => parseInt(wheelSize.value))
 
-    const range100d = computed(() => {
-        const range = data100d.find(({temp, wheelsize, ac}) =>
+
+    const findRange = (data) => {
+        const range = data.find(({temp, wheelsize, ac}) =>
             temp === temperature.value && wheelsize === wheelSizeNum.value && ac === acString.value)?.hwy
 
         return range?.find(r => r?.kmh === speed.value)?.kilometers
-    })
+    }
+
+    const range100d = computed(() => findRange(data100d))
+    const rangeP100d = computed(() => findRange(dataP100d))
 
     return {
         speed,
         temperature,
         wheelSize,
         ac,
-        range100d
+        range100d,
+        rangeP100d
     }
 }
 
