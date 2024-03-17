@@ -15,7 +15,7 @@
 }
 
 .hero {
-  background: url("../assets/img/hero-image@2x.jpg") center no-repeat;
+  background: var(--grey) url("../assets/img/hero-image_2x.webp") center no-repeat;
   background-size: cover;
   height: 45.625rem;
 }
