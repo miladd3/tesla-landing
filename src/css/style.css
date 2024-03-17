@@ -128,6 +128,7 @@
 
 .range-calculator .wheel img {
   width: 100%;
+  transform: scale(0.95);
 }
 
 .range-calculator .wheel.-right {
@@ -138,6 +139,10 @@
 .range-calculator .wheel.-left {
   bottom: 13%;
   left: 64%;
+}
+
+.range-calculator .wheels.-size-21 img{
+  transform: scale(1);
 }
 
 
@@ -189,6 +194,7 @@
   border-right: 1px solid #b9bed1;
   padding: 0 42px;
 }
+
 .range-form .col:last-child {
   border-right: none;
 }
@@ -297,6 +303,40 @@
   margin-bottom: 0.625rem;
 }
 
+.ac-button .icon {
+  display: none;
+}
+
+.ac-button.-ac-off .icon.-fan-grey {
+  display: block;
+}
+
+.ac-button.-ac-on .icon.-fan-white {
+  display: block;
+}
+
+.ac-button.-heat-off .icon.-wave-grey {
+  display: block;
+}
+
+.ac-button.-heat-on .icon.-wave-white {
+  display: block;
+}
+
+.ac-button.-ac-on {
+  background: var(--primary-color);
+}
+
+.ac-button.-ac-on .state,
+.ac-button.-heat-on .state {
+  color: var(--white);
+}
+
+.ac-button.-heat-on {
+  background: var(--dark-red);
+}
+
+
 .radios {
   display: flex;
   align-items: center;
@@ -324,17 +364,16 @@
 }
 
 
-.wheel-selector.size-19 img{
+.wheel-selector.size-19 img {
   width: 3.3125rem;
 }
 
 
-
-.wheel-input input[type="radio"] {
+#wheel-input input[type="radio"] {
   display: none;
 }
 
-.wheel-input input[type="radio"]:checked + label {
+#wheel-input input[type="radio"]:checked + label {
   border: 1px solid var(--primary-color);
 }
 

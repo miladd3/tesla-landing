@@ -74,9 +74,9 @@
           <div class="range-input">
             <label class="label">Speed</label>
 
-            <div class="number-input">
+            <div class="number-input" id="speed-input">
               <div class="content">
-                <div class="num">100</div>
+                <div class="num"><span class="render">100</span></div>
                 <div class="unit">KMH</div>
               </div>
               <div class="actions">
@@ -92,9 +92,9 @@
           <div class="range-input">
             <label class="label label-temp">Outside temperature </label>
             <div class="inputs">
-              <div class="number-input">
+              <div class="number-input" id="temperature-input">
                 <div class="content">
-                  <div class="num">20°</div>
+                  <div class="num"><span class="render">20</span>°</div>
                 </div>
                 <div class="actions">
                   <button class="plus"></button>
@@ -106,30 +106,30 @@
               <button class="ac-button">
                 <span class="state">AC OFF</span>
 
-                <span class="icon">
-                  <img src="src/assets/img/icon-fan-gray.svg" alt="fan">
-                  <img src="src/assets/img/icon-fan-white.svg" alt="fan" hidden>
-                  <img src="src/assets/img/icon-wave-gray.svg" alt="wave" hidden>
-                  <img src="src/assets/img/icon-wave-white.svg" alt="wave" hidden>
+                <span class="icons">
+                  <img src="src/assets/img/icon-fan-gray.svg"  class="icon -fan-grey" alt="fan">
+                  <img src="src/assets/img/icon-fan-white.svg" class="icon -fan-white" alt="fan">
+                  <img src="src/assets/img/icon-wave-gray.svg" class="icon -wave-grey" alt="wave">
+                  <img src="src/assets/img/icon-wave-white.svg" class="icon -wave-white" alt="wave">
                 </span>
               </button>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="range-input wheel-input">
+          <div class="range-input" id="wheel-input">
             <label class="label">wheels</label>
 
             <div class="radios">
-              <input type="radio" id="yes" name="wheel-size" value="yes">
-              <label for="yes" class="wheel-selector size-19">
+              <input type="radio" id="size-19" name="wheel-size" value="19" checked>
+              <label for="size-19" class="wheel-selector size-19">
                 <img src="src/assets/img/icon-wheel.svg" alt="wheel">
 
-                <span class="size">19”</span>
+                <span class="size"><span class="render">19</span>”</span>
               </label>
 
-              <input type="radio" id="no" name="wheel-size" value="no">
-              <label for="no" class="wheel-selector size-21">
+              <input type="radio" id="size-21" name="wheel-size" value="21">
+              <label for="size-21" class="wheel-selector size-21">
                 <img src="src/assets/img/icon-wheel.svg" alt="wheel">
 
                 <span class="size">21”</span>
@@ -223,5 +223,6 @@
 
 </footer>
 <script type="module" src="/src/main.js"></script>
+<script type="module" src="/src/reactivity.js"></script>
 </body>
 </html>
