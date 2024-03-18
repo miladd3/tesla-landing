@@ -118,6 +118,24 @@
   width: 100%;
 }
 
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes turn-small {
+  0% {
+    transform: scale(0.95) rotate(0deg);
+  }
+  100% {
+    transform: scale(0.95) rotate(360deg);
+  }
+}
+
 .range-calculator .wheel {
   position: absolute;
   width: 9.5%;
@@ -125,7 +143,8 @@
 
 .range-calculator .wheel img {
   width: 100%;
-  transform: scale(0.95);
+  animation: turn-small 0.1s linear infinite;
+
 }
 
 .range-calculator .wheel.-right {
@@ -138,11 +157,11 @@
   left: 64%;
 }
 
-.range-calculator .wheels.-size-21 img{
-  transform: scale(1);
+.range-calculator .wheels.-size-21 img {
+  animation: turn 0.1s linear infinite;
 }
 
-.range-calculator .desc{
+.range-calculator .desc {
   margin-top: 4rem;
   margin-bottom: 4.5rem;
   font-family: Arial, sans-serif;
