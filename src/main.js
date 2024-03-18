@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const {speed, temperature, wheelSize, ac, range100d, rangeP100d} = useRangeCalculator();
     bind({speed, temperature, wheelSize, ac, range100d, rangeP100d})
 
+
     document.querySelector('.button-scroll').addEventListener('click', () => {
         scrollTo('.range-calculator')
     })
-
-
-    applyClassInViewport('.range-calculator .title', 'fade-in');
+    applyClassInViewport('.range-calculator .title', 'bounce-in');
+    applyClassInViewport('.motto h3', 'bounce-in');
+    applyClassInViewport('.motto > .description', 'bounce-in');
+    applyClassInViewport('.main-nav .logo', 'bounce-in');
 });
 
