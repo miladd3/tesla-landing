@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     bind({speed, temperature, wheelSize, ac, range100d, rangeP100d})
 
 
-    document.querySelector('.button-scroll').addEventListener('click', () => {
+    document.querySelector('.button-scroll').addEventListener('click', (e) => {
+        e.preventDefault()
         scrollTo('.range-calculator')
     })
     applyClassInViewport('.range-calculator .title', 'bounce-in');

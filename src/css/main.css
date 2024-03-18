@@ -500,3 +500,13 @@
 .bounce-in {
   animation: bounceIn 1s;
 }
+
+.no-js-warning {
+  color: var(--dark-red);
+  display: none;
+  margin-top: 1rem;
+}
+
+.no-js .no-js-warning {
+  display: block;
+}
